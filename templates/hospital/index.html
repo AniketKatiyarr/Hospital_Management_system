@@ -1,0 +1,108 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+     .jumbotron {
+      height:800px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/backgroundd.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,h3
+   {
+      
+      text-align: justify;
+    }
+    
+    .textt
+    {
+      font-size: 5vh;
+      position: relative;
+      left: 70px;
+      
+
+    }
+    .test
+    {
+      
+      margin-top:10px;
+      position: relative;
+      left: 275px;
+      
+
+    }
+
+
+    .alert {
+      margin: 0px;
+    }
+
+
+
+    .glow {
+
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #007bff,, 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
+      }
+      to {
+        text-shadow: 0 0 20px #007bff;, 0 0 30px #007bff;
+      }
+    }
+
+    
+
+
+    .btn-1 {
+      background: rgb(6,14,131);
+      background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgb(92 224 231) 100%);
+      border: none;
+      font-size: 200%;
+
+ </style>
+</head>
+
+
+<div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  <br>
+  <h5 class="display-3 glow">Trust The Process...!! We are here for you..!!</h5>
+  <br><br><br><br>
+  <p>
+  {% comment %} <h3>Need Doctor...? Get It Now...!!</h3> {% endcomment %}
+  <div class='textt'>Need Doctor...? Get It Now...!!</div>
+
+  <p class="lead">
+    <div class="test">
+    <a class="custom-btn btn-1" href="/patientclick" role="button">Take Appointment</a>
+    </div>
+  </p>
+  <br><br>
+</div>
+
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+    
+
+  </div>
+</section> 
+
+
+{% endblock content %}
